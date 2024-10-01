@@ -29,10 +29,10 @@
 - [📂 Repository Structure](#-repository-structure)
 - [🧩 Modules](#-modules)
 - [🚀 Getting Started](#-getting-started)
-    - [🔖 Prerequisites](#-prerequisites)
-    - [📦 Installation](#-installation)
-    - [🤖 Usage](#-usage)
-    - [🧪 Tests](#-tests)
+  - [🔖 Prerequisites](#-prerequisites)
+  - [📦 Installation](#-installation)
+  - [🤖 Usage](#-usage)
+  - [🧪 Tests](#-tests)
 - [📌 Project Roadmap](#-project-roadmap)
 - [🤝 Contributing](#-contributing)
 - [🎗 License](#-license)
@@ -49,13 +49,13 @@
 ## 👾 Features
 
 <code>❯ Key features of the Mysterious Organism project include:</code>
+
 - Create organisms with unique DNA strands composed of 15 bases.
 - Simulate DNA mutations for the organisms.
 - Compare DNA sequences between organisms to check for commonality.
 - Determine the organism's likelihood of survival based on its DNA composition.
 - Generate complementary DNA strands.
 - Create 30 organisms that have a higher likelihood of survival.
-
 
 ---
 
@@ -74,8 +74,8 @@
 
 <details closed><summary>.</summary>
 
-| File | Summary |
-| --- | --- |
+| File                                                                      | Summary                                                                                                                                   |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | [main.js](https://github.com/MAH-7/Mysterious-Organism/blob/main/main.js) | <code>❯ Contains the implementation of the DNA factory function, mutation simulation, survival checks, and DNA comparison methods.</code> |
 
 </details>
@@ -93,16 +93,19 @@
 Build the project from source:
 
 1. Clone the Mysterious-Organism repository:
+
 ```sh
 ❯ git clone https://github.com/MAH-7/Mysterious-Organism
 ```
 
 2. Navigate to the project directory:
+
 ```sh
 ❯ cd Mysterious-Organism
 ```
 
 3. Install the required dependencies:
+
 ```sh
 ❯ npm install
 ```
@@ -127,10 +130,10 @@ Execute the test suite using the following command:
 
 ## 📌 Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement DNA mutation feature.</strike>
+- [x] **`Task 1`**: <strike>Implement DNA mutation feature.</strike>
 - [x] **`Task 2`**: <strike>Implement DNA comparison feature.</strike>
 - [x] **`Task 3`**: <strike>Implement survival likelihood feature.</strike>
-- [ ] **`Task 4`**: Find the two most related organisms based on DNA similarity.
+- [x] **`Task 4`**: <strike>Find the two most related organisms based on DNA similarity.</strike>
 
 ---
 

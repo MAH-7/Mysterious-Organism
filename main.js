@@ -36,12 +36,11 @@ const pAequorFactory = (organismId, dnaArray) => {
           matchCount++;
         }
       }
-      const specimenPercentage = ((matchCount / this.dna.length) * 100).toFixed(
-        2
-      );
-      console.log(
-        `specimen #${this.specimenNum} and specimen #${targetDna.specimenNum} have ${specimenPercentage}% DNA in common`
-      );
+      const specimenPercentage = (matchCount / this.dna.length) * 100;
+      return specimenPercentage;
+      // console.log(
+      //   `specimen #${this.specimenNum} and specimen #${targetDna.specimenNum} have ${specimenPercentage}% DNA in common`
+      // );
     },
     willLikelySurvive() {
       let matchCount = 0;
@@ -79,6 +78,19 @@ while (survivingPAequor.length < 30) {
   organismId++;
 }
 
+let highestPercentage = 0;
+let mostRelatedPair = [];
+
+for (let i = 0; i < survivingPAequor.length - 1; i++) {
+  for (let j = i + 1; j < survivingPAequor.length; j++) {
+    const percentage = survivingPAequor[i].compareDNA(survivingPAequor[j]);
+    if (percentage > highestPercentage) {
+      highestPercentage = percentage;
+      mostRelatedPair = [survivingPAequor[i], survivingPAequor[j]];
+    }
+  }
+}
+
 // const pAequor1 = pAequorFactory(1, mockUpStrand());
 // const pAequor2 = pAequorFactory(2, mockUpStrand());
 // console.log(`currentDna: ${pAequor.dna},
@@ -92,9 +104,10 @@ while (survivingPAequor.length < 30) {
 
 // Print the array of surviving instances
 // console.log(survivingPAequor);
-
 // Print the length of the array to ensure it contains 30 instances
 // console.log(`Number of surviving instances: ${survivingPAequor.length}`);
 // const pAequor1 = pAequorFactory(1, mockUpStrand());
 // console.log(pAequor1.dna);
 // console.log(pAequor1.complementStrand());
+
+console.log(`The most related pair is specimen #${mostRelatedPair[0].specimenNum} and specimen #${mostRelatedPair[1].specimenNum} with ${highestPercentage.toFixed(2)}% DNA in common.`);
